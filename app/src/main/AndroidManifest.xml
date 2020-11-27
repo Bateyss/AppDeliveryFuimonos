@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fm.modules">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_fuimonos"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo_fuimonos"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".app.login.ComprobarSessionActivity"></activity>
+        <activity android:name=".app.historial.HistorialDriver" />
+        <activity android:name=".app.pedidos.Principal" />
+        <activity android:name=".app.signup.SignUp" />
+        <activity android:name=".app.perfil.PerfilDriver" />
+        <activity android:name=".app.login.Logon" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

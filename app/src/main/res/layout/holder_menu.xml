@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".app.restaurantes.RestaurantesActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMenuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginTop="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_4x"
+        android:layout_marginBottom="@dimen/space_2x"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMenuName"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                tools:text="Que brava! Que brava!" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

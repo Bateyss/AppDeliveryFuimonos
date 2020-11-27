@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_dialog_header_background"
+                app:layout_constraintDimensionRatio="w,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4x"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/space_4x"
+                android:includeFontPadding="false"
+                android:text="@string/oh_no_x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLock"
+                android:layout_width="341dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/sad_face"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecoverySuccessDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/bad_signin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/purple"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/ivLock" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPassErr"
+                style="@style/PrimaryButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="224dp"
+                android:paddingStart="@dimen/space_4x"
+                android:paddingEnd="@dimen/space_4x"
+                android:text="@string/come_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

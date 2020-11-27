@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/SelectableBorderlesStyle"
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/space_2x"
+            android:layout_marginTop="@dimen/space_3x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewTitleStyle"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:id="@+id/tvTitle"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_6x"
+            android:layout_marginTop="@dimen/space_2x"
+            android:layout_marginEnd="@dimen/space_6x"
+            tools:text="¡Listo y seguro!"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_10x"
+            android:layout_marginTop="@dimen/space_6x"
+            android:layout_marginEnd="@dimen/space_10x"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:textColor="@color/purple"
+            android:includeFontPadding="false"
+            tools:text="¡Listo!"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/ivIcon"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintBottom_toTopOf="@+id/tvMessage"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/space_default"
+            tools:text="Hemos actualizado tu contraseña."
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintBottom_toTopOf="@+id/btnChangePassword"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/SecondaryButtonStyle"
+            android:id="@+id/btnChangePassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4x"
+            android:layout_marginEnd="@dimen/space_4x"
+            android:layout_marginBottom="@dimen/space_4x"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            tools:text="Iniciar sesión"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

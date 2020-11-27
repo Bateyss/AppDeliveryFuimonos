@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2x"
+        android:layout_marginTop="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_2x"
+        android:layout_marginBottom="@dimen/space_2x"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="201dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNombreRestaurante"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="120dp"
+                android:text="@{food.name}"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvFoodDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nombre Restaurante" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDirecionCliente"
+                android:layout_width="330dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="3"
+                android:text="@{food.description}"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvFoodPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreRestaurante"
+                tools:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrecioPedido"
+                style="@style/TextViewTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="52dp"
+                android:text="@{@string/price_x(food.price)}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvNombreRestaurante"
+                app:layout_constraintTop_toBottomOf="@+id/tvFoodDescription"
+                tools:text="$" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnTomarPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_default"
+                android:background="@drawable/add_food_action_bacground"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/space_2x"
+                android:paddingTop="@dimen/space_4n"
+                android:paddingEnd="@dimen/space_2x"
+                android:paddingBottom="@dimen/space_4n"
+                android:text="@string/tomar_pedido"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPrecioPedido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvFoodPrice" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnNumeroOrden"
+                android:layout_width="123dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/add_food_action_bacground_orange"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/space_2x"
+                android:paddingTop="@dimen/space_4n"
+                android:paddingEnd="@dimen/space_2x"
+                android:paddingBottom="@dimen/space_4n"
+                android:text="@string/tomar_pedido"
+                android:textColor="@color/purple"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrecioPedido" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

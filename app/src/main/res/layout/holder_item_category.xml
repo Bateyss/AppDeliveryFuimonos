@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fuimonos.app.restaurants.RestaurantsViewModel" />
+        <variable
+            name="category"
+            type="com.fuimonos.app.models.FoodCategory" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_default"
+        android:layout_marginTop="@dimen/space_default"
+        android:layout_marginBottom="@dimen/space_default"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="8dp"
+        android:onClick="@{ () -> viewModel.onSelectCategory(category) }">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCategoryIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_default"
+                android:layout_marginBottom="@dimen/space_default"
+                tools:srcCompat="@drawable/ic_hamburger"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_default"
+                android:text="@{category.categoryName}"
+                tools:text="Hamburguesa"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/ivCategoryIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tvRestaurantsCount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRestaurantsCount"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_default"
+                android:text="@{@string/x_restaurants(category.restaurantsCount)}"
+                tools:text="12 restaurantes"
+                app:layout_constraintStart_toEndOf="@+id/ivCategoryIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategoryName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_4x">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewTitleStyle"
+            android:id="@+id/tvTitle"
+            android:includeFontPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_shopping_cart_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ivEmptyShoppingCart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEmptyShoppingCart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/space_4x"
+            android:layout_marginBottom="@dimen/space_4x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvMainDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMainDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/purple"
+            android:textStyle="bold"
+            android:text="@string/your_cart_is_empty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivEmptyShoppingCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvSecondaryDescription"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSecondaryDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_default"
+            android:text="@string/empty_shopping_cart_description"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnBack"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/SecondaryButtonStyle"
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_6x"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="@string/come_back"
+            android:paddingStart="@dimen/space_6x"
+            android:paddingEnd="@dimen/space_6x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSecondaryDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

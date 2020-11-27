@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_flan" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:minHeight="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemTitlei"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:focusable="auto"
+                android:maxLength="25"
+                android:text="Titulo del row"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/itemTexti"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center|center_vertical"
+                android:overScrollMode="always"
+                android:text="summary summary summary summary summary summary summary summary"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

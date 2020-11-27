@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextViewTitleStyle"
+    android:id="@+id/tvRestaurantHeader"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_2x"
+    android:layout_marginTop="@dimen/space_2x"
+    android:layout_marginEnd="@dimen/space_2x"
+    android:layout_marginBottom="@dimen/space_2x"
+    tools:text="Restaurantes populares"/>

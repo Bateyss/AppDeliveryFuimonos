@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DialogTitleStyle"
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_4x"
+        android:layout_marginTop="28dp"
+        tools:text="Elon, tenemos\nun problema..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivHeader"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_4x"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/tvMainDescription"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMainDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2x"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purple"
+        android:gravity="center"
+        tools:text="No tenés conexión a internet"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ivIcon"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/tvSecondaryDescription"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSecondaryDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2x"
+        android:textColor="@color/purple"
+        android:gravity="center"
+        tools:text="Por favor revisa tu conexión"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainDescription"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/btnAction"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/DialogSingleOptionButtonStyle"
+        android:id="@+id/btnAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_3x"
+        android:layout_marginTop="@dimen/space_2x"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="Regresar"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvSecondaryDescription"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

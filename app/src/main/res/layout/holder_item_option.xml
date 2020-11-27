@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/SelectableStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOptionIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="@dimen/space_3x"
+            android:layout_marginTop="@dimen/space_2x"
+            android:layout_marginBottom="@dimen/space_2x"
+            tools:srcCompat="@drawable/ic_profile_option"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOptionName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2x"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/purple"
+            android:textStyle="bold"
+            tools:text="Mi perfil"
+            app:layout_constraintStart_toEndOf="@+id/ivOptionIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivOptionIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/ivOptionIcon"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/separatorColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

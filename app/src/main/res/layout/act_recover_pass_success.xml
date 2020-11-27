@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextViewTitleStyle"
+        android:id="@+id/tvTitle"
+        android:includeFontPadding="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginTop="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_4x"
+        android:text="@string/ready"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLock"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_10x"
+        android:layout_marginBottom="@dimen/space_10x"
+        android:src="@drawable/ic_lock_open"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/tvRecoverySuccessDescription" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRecoverySuccessDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recovery_success_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ivLock"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/PrimaryButtonStyle"
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_4x"
+        android:paddingEnd="@dimen/space_4x"
+        android:layout_marginBottom="@dimen/space_10x"
+        android:layout_marginTop="@dimen/space_10x"
+        android:text="@string/login_app"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecoverySuccessDescription"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/opaquePurple</item>
+        <item name="android:windowBackground">@color/opaquePurple</item>
+        <item name="fontFamily">@font/comfortaa_family</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="actionBarTabStyle">@color/opaquePurple</item>
+    </style>
+
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title." parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/opaquePurple</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TextViewTitleStyle">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextViewTitleStyle2">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextViewTitleStyle3">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4</item>
+        <item name="android:textColor">@color/separatorColor</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="DialogTitleStyle" parent="TextViewTitleStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4</item>
+    </style>
+
+    <style name="DialogTitleSmallAppearance" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="DialogTitleBigAppearance" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="EditTextCompactSpacingStyle">
+        <item name="android:paddingStart">@dimen/space_default</item>
+        <item name="android:paddingEnd">@dimen/space_default</item>
+        <item name="android:paddingBottom">@dimen/space_4n</item>
+    </style>
+
+    <style name="MainButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/space_2x</item>
+        <item name="android:paddingBottom">@dimen/space_2x</item>
+    </style>
+
+    <style name="PrimaryButtonStyle" parent="MainButtonStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/space_2x</item>
+        <item name="android:paddingBottom">@dimen/space_2x</item>
+        <item name="cornerRadius">100dp</item>
+    </style>
+
+    <style name="SecondaryButtonStyle" parent="PrimaryButtonStyle">
+        <item name="backgroundTint">@color/orange</item>
+    </style>
+
+    <style name="PrimaryRightButtonStyle" parent="MainButtonStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="shapeAppearance">@style/RightButtonShapeAppearance</item>
+    </style>
+
+    <style name="RightButtonShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeBottomLeft">24dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="DialogSingleOptionButtonStyle" parent="MainButtonStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:paddingStart">@dimen/space_4x</item>
+        <item name="android:paddingEnd">@dimen/space_4x</item>
+        <item name="cornerRadius">18dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">40dp</item>
+    </style>
+
+    <style name="SelectableBorderlesStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="SelectableStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="HorizontalProgressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:scaleY">5</item>
+    </style>
+
+</resources>

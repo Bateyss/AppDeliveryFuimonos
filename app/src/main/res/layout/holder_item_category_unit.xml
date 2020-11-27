@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_default"
+            android:layout_marginTop="@dimen/space_default"
+            android:layout_marginEnd="@dimen/space_default"
+            android:layout_marginBottom="@dimen/space_default"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCategoryIcon1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="@dimen/space_default"
+                    android:layout_marginTop="@dimen/space_default"
+                    android:layout_marginBottom="@dimen/space_default"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/ic_hamburger" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCategoryName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_default"
+                    android:layout_marginEnd="@dimen/space_default"
+                    android:text="@{category.categoryName}"
+                    app:layout_constraintBottom_toTopOf="@+id/tvRestaurantsCount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivCategoryIcon1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="Hamburguesa" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRestaurantsCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_default"
+                    android:layout_marginEnd="@dimen/space_default"
+                    android:text="@{@string/x_restaurants(category.restaurantsCount)}"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivCategoryIcon1"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCategoryName1"
+                    tools:text="12 restaurantes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

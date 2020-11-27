@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="32dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/custom_number_picker_background">
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/increment"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/space_default"
+        android:paddingBottom="@dimen/space_default"
+        android:includeFontPadding="false"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_plus_sign"
+        app:iconGravity="textStart"
+        app:iconSize="12dp"
+        app:iconPadding="0dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/gray"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/space_4n"
+        android:text="@string/initial_number_picker_value"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@null"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/decrement"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/space_default"
+        android:paddingBottom="@dimen/space_default"
+        android:includeFontPadding="false"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_minus_sign"
+        app:iconGravity="textStart"
+        app:iconSize="12dp"
+        app:iconPadding="0dp"/>
+
+</LinearLayout>

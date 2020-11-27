@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".app.restaurantes.RestaurantesActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_marginStart="@dimen/space_4x"
+        android:layout_marginTop="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_4x"
+        android:layout_marginBottom="@dimen/space_2x"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivOutstandingImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/sample_outstanding_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="4:2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/flRestaurantLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_2x"
+                android:layout_marginEnd="@dimen/space_4x"
+                android:layout_marginBottom="@dimen/space_2x"
+                android:padding="@dimen/space_4n"
+                android:background="@drawable/ripple_circle_profile_photo_shape"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivOutstandingImage"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivRestaurantLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewTitleStyle"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:id="@+id/tvRestaurantName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginEnd="@dimen/space_2x"
+                android:maxLines="2"
+                android:text="@{restaurant.name}"
+                app:layout_constraintStart_toEndOf="@+id/flRestaurantLogo"
+                app:layout_constraintTop_toTopOf="@+id/flRestaurantLogo"
+                app:layout_constraintEnd_toStartOf="@+id/tvLabelMinimalMount"
+                app:layout_constraintBottom_toBottomOf="@+id/flRestaurantLogo"
+                tools:text="Que brava! Que brava!" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMinimalMount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{restaurant.minimumMount}"
+                tools:text="$8.50"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelMinimalMount"
+                app:layout_constraintTop_toTopOf="@+id/tvRestaurantName"
+                app:layout_constraintBottom_toTopOf="@+id/tvLabelMinimalMount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelMinimalMount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_2x"
+                android:text="@string/minimal_mount"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tvRestaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/tvMinimalMount"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRestaurantName"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

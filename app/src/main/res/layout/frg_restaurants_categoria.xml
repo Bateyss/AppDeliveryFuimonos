@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        style="@style/TextViewTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2x"
+        android:layout_marginTop="@dimen/space_4x"
+        android:layout_marginEnd="@dimen/space_2x"
+        android:includeFontPadding="false"
+        android:text="@string/what_will_you_eat_today"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toStartOf="@+id/flProfilePhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include layout="@layout/inc_profile_photo" />
+
+    <EditText
+        android:id="@+id/etSearch_rest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2x"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/space_default"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/space_default"
+        android:paddingEnd="@dimen/space_default"
+        app:layout_constraintEnd_toEndOf="@+id/flProfilePhoto"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+        -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch_rest">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategorias_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/rvRestaurants_res"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    </LinearLayout>
+
+
+    <!--<ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

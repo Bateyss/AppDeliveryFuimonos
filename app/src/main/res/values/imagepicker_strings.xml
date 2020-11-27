@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_choose_image_provider">Selecciona</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="title_gallery">Galería</string>
+    <string name="title_camera">Cámara</string>
+
+    <string name="image_picker_provider_authority_suffix">.imagepicker.provider</string>
+
+    <string name="message_gallery_permission_denied">Se necesitan permisos de lectura de almacenamiento externo para seleccionar Imagen. Active los permisos solicitados desde Configuración > Permisos.</string>
+    <string name="message_camera_permission_denied">Se necesitan permisos de cámara y almacenamiento externo para capturar imágenes. Desactivar cualquier permiso no permitirá que la aplicación se ejecute sin problemas. Active todos los permisos solicitados desde Configuración> Permisos.</string>
+    <string name="permission_gallery_denied">
+        <![CDATA[Se necesita permiso de almacenamiento para elegir la imagen de la galería. Permita permiso de almacenamiento desde Configuración > Permisos.]]></string>
+    <string name="permission_camera_extended_denied">
+        <![CDATA[Se necesitan permisos de cámara y almacenamiento para tomar una foto. Permita ambos permisos solicitados desde Configuración > Permisos.]]></string>
+    <string name="permission_camera_denied">
+        <![CDATA[Se necesita permiso de almacenamiento para tomar una foto. Permita permiso de almacenamiento desde Configuración > Permisos.]]></string>
+
+    <string name="error_failed_to_create_camera_image_file">Error al crear el archivo de imagen de la cámara</string>
+    <string name="error_failed_pick_gallery_image">Error al elegir la imagen de la Galería</string>
+    <string name="error_failed_to_crop_image">Error al recortar imagen</string>
+    <string name="error_failed_to_compress_image">Error al comprimir la imagen</string>
+    <string name="error_task_cancelled">Se canceló la captura de la imagen</string>
+
+    <string name="ucrop_label_edit_photo">Editar foto</string>
+    <string name="ucrop_rotate">Rotar</string>
+    <string name="ucrop_scale">Escalar</string>
+    <string name="ucrop_crop">Recortar</string>
+</resources>

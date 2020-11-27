@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menuHome"
+    app:startDestination="@+id/restaurants">
+
+    <fragment
+        android:id="@+id/restaurants"
+        android:label="home"
+        tools:layout="@layout/frg_restaurants" >
+
+        <action
+            android:id="@+id/action_restaurants_to_restaurant_menu"
+            app:destination="@+id/restaurantMenu"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantMenu"
+        android:label="menu restaurante"
+        tools:layout="@layout/frg_restaurant_menu">
+
+        <argument
+            android:name="RESTAURANT"
+            app:argType="com.fuimonos.app.models.Restaurant"/>
+
+        <action
+            android:id="@+id/action_menu_to_food_complement"
+            app:destination="@+id/foodComplements"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodComplements"
+        android:label="complementos"
+        tools:layout="@layout/frg_food_complements">
+
+        <argument
+            android:name="FOOD"
+            app:argType="com.fuimonos.app.models.Food"/>
+
+    </fragment>
+
+</navigation>

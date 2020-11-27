@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivHeaderBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_header_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/flProfilePhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_2x"
+        android:background="@drawable/ripple_circle_profile_photo_shape"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/space_4n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvHelloUser">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProfilePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_empty_profile_photo" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHelloUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@{@string/hello_x(viewModel.userFirstName)}"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/purple"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flProfilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/ivHeaderBackground"
+        tools:text="Hola Luis!" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHoras"
+        style="@style/SelectableStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="16dp"
+        android:drawablePadding="@dimen/space_3x"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/space_default"
+        android:text="HorasTrabajar"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelloUser" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        style="@style/SecondaryButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/log_out_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHoras" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
